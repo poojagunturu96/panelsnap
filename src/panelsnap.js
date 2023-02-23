@@ -179,8 +179,8 @@ export default class PanelSnap {
 
     // TODO: Only one partial panel in viewport, add support for space between panels?
     // eslint-disable-next-line no-console
-    console.error('PanelSnap does not support space between panels, snapping back.');
-    this.snapToPanel(visiblePanel, deltaY > 0, deltaX > 0);
+    console.warn('PanelSnap does not support space between panels.');
+    // this.snapToPanel(visiblePanel, deltaY > 0, deltaX > 0);
   }
 
   snapToPanel(panel, toBottom = false, toRight = false) {
