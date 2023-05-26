@@ -52,10 +52,10 @@ export function getTargetScrollOffset(container, element, toBottom = false, toRi
 
 export function getElementsInContainerViewport(container, elementList) {
   const containerRect = getContainerRect(container);
-  
+
   return elementList.filter((element) => {
     const elementRect = element.getBoundingClientRect();
-    
+
     return (
       elementRect.top < containerRect.bottom
       && elementRect.right > containerRect.left
@@ -71,7 +71,7 @@ export function elementFillsContainer(container, element) {
 
   return (
     elementRect.top <= containerRect.top
-    && elementRect.bottom >= containerRect.bottom || elementRect.bottom <= containerRect.bottom
+    && elementRect.bottom >= containerRect.bottom
     && elementRect.left <= containerRect.left
     && elementRect.right >= containerRect.right
   );
